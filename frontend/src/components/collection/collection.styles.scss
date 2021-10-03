@@ -1,0 +1,41 @@
+.collection-page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .title {
+    font-size: 38px;
+    margin: 0 auto 30px;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & .collection-item {
+      margin-bottom: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+.textBoxStyle{
+  padding: 20px;
+  align-items: center;
+  margin: 20px;
+  width: 80%;
+  background-color: #f3edf7;
+}
+.inputStyle{
+  padding: 20px;
+  width: 100%;
+ 
+}
+
+
+
+
+  
+
+
+
