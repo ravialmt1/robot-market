@@ -28,8 +28,6 @@ const CollectionPage = () => {
       .finally(setLoading(false))
   },[]
   )
-  
-  console.log(robotList);
   return (
 
     <div className='collection-page'>
