@@ -28,9 +28,9 @@ const CartComponent = ({ cartItems=[], total }) => (
       </div>
     </div>
     {cartItems.map(cartItem => (
-      <div className='header-block'><CartItem key={cartItem.id} cartItem={cartItem} /></div>
+      <div className='header-block'><CartItem key={cartItem.id} cartItem={cartItem} props /></div>
     ))}
-    <div className='total'>TOTAL: ${total}</div>
+    <div className='total'>TOTAL: {new Intl.NumberFormat('th-TH', { style: 'currency', currency: 'THB' }).format(total)}</div>
   </div>
 );
 

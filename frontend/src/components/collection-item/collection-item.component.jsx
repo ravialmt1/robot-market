@@ -17,7 +17,7 @@ const CollectionItem = ({ item, addItem, cartItems, reduceFromInvetory }) => {
 
   }
 
-  const addItemInCart = id => {
+  const addItemInCart = ()=> {
     const existingCartItem = cartItems.find(
       checkItem
     );
@@ -37,17 +37,14 @@ const CollectionItem = ({ item, addItem, cartItems, reduceFromInvetory }) => {
         <span className='name'>{name}</span>
         <span className='date'>{new Date(createdAt).toLocaleDateString("en-US")}</span>
       </div>
-      <div
-        className='image'
-
-      ><img src={image} alt="image" /></div>
+      <div className='image'><img src={image} alt="image" /></div>
       <div className='collection-footer'>
         <span className='price'>Price</span>
         <span className='price'>Material</span>
         <span className='stock'>Stock</span>
       </div>
       <div className='collection-footer'>
-        <span className='price'>{price}</span>
+        <span className='price'>{new Intl.NumberFormat('th-TH', { style: 'currency', currency: 'THB' }).format(price)}</span>
         <span className='price'>{material}</span>
         <span className='stock'>{stock}</span>
       </div>
