@@ -24,6 +24,11 @@ export const fetchRobotsSuccess = products => ({
   payload: { products }
 });
 
+export const filterRobots = products => ({
+  type: ShopActionTypes.FILTER_ROBOTS,
+  payload: { products }
+});
+
 export const fetchRobotsFailure = error => ({
   type: ShopActionTypes.FETCH_ROBOTS_FAILURE,
   payload: { error }

@@ -24,8 +24,7 @@ class HomePage extends React.Component {
     if (loading) {
       return <div>Loading...</div>;
     }
-    console.log(error,loading,items);
-    console.log(this.props);
+    
     return (
   <div style={{display:'flex'}} >
      

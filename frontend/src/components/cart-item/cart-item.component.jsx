@@ -28,7 +28,7 @@ const cartItem = ({ cartItem, clearItemFromCart, addItem, removeItem, cartItems,
   
     const removeItemInCart = () => {
     
-      //removeItem(cartItem);
+      removeItem(cartItem);
       increaseInInvetory(existingCollectionItem);
     }
     
