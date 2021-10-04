@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-
+import shortid from 'shortid';
 import CartItem from '../cart-item/cart-item.component'
 
 import {
@@ -28,7 +28,7 @@ const CartComponent = ({ cartItems=[], total }) => (
       </div>
     </div>
     {cartItems.map(cartItem => (
-      <div className='header-block'><CartItem key={cartItem.id} cartItem={cartItem} props /></div>
+      <div className='header-block'><CartItem key={shortid.generate()} cartItem={cartItem} props /></div>
     ))}
     <div className='total'>TOTAL: {new Intl.NumberFormat('th-TH', { style: 'currency', currency: 'THB' }).format(total)}</div>
   </div>
